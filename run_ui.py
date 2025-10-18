@@ -31,7 +31,7 @@ def main():
     
     # Run Streamlit
     try:
-        subprocess.run([sys.executable, "-m", "streamlit", "run", "app_universal.py"], check=True)
+        subprocess.run([sys.executable, "-m", "streamlit", "run", "app.py"], check=True)
     except KeyboardInterrupt:
         print("\n👋 Shutting down...")
     except subprocess.CalledProcessError as e:
