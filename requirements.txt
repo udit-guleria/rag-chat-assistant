@@ -11,4 +11,12 @@ openai==1.31.1 # For embeddings
 tiktoken==0.7.0  # For embeddings 
 
 # install markdown depenendies with: `pip install "unstructured[md]"` after install the requirements file. Leave this line commented out.
-streamlit==1.28.1  # For the web UI 
+streamlit==1.28.1  # For the web UI
+
+# Additional dependencies for universal document support
+pypdf==3.17.4  # For PDF files
+docx2txt==0.8  # For Word documents
+python-pptx==0.6.23  # For PowerPoint files
+openpyxl==3.1.2  # For Excel files
+pandas==2.3.3  # For CSV and data processing
+python-magic==0.4.27  # For file type detection (optional) 
