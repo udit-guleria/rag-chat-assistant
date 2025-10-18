@@ -1,6 +1,6 @@
 @echo off
-echo Starting RAG Chat Assistant...
+echo Starting Universal Document RAG Assistant...
+echo Supporting: PDF, Word, PowerPoint, Excel, CSV, JSON, HTML, Markdown, Text
 echo.
-python run_ui.py
+python run_universal_ui.py
 pause
-

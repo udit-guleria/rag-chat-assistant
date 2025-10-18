@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Simple script to run the Streamlit UI for the RAG application.
-This script ensures the database is initialized before starting the UI.
+Universal launcher script for the Multi-Format Document RAG application.
+This version supports PDF, Word, PowerPoint, Excel, CSV, JSON, HTML, Markdown, and Text files.
 """
 
 import subprocess
@@ -15,22 +15,23 @@ def check_database():
     return chroma_path.exists() and any(chroma_path.iterdir())
 
 def main():
-    print("🚀 Starting RAG Chat Assistant...")
+    print("🚀 Starting Universal Document RAG Assistant...")
+    print("📄 Supporting: PDF, Word, PowerPoint, Excel, CSV, JSON, HTML, Markdown, Text")
     
-    # Check if database exists
+    # Check if database exists (optional for this version)
     if not check_database():
-        print("❌ Database not found. Please run 'python create_database.py' first.")
-        print("   This will process the documents and create the vector database.")
-        sys.exit(1)
+        print("ℹ️  No existing database found. You can upload documents through the web interface.")
+    else:
+        print("✅ Found existing database with documents.")
     
-    print("✅ Database found. Starting web interface...")
     print("🌐 The app will open in your default browser.")
     print("📝 You can also access it at: http://localhost:8501")
-    print("\n" + "="*50)
+    print("📁 Upload your documents in various formats through the web interface!")
+    print("\n" + "="*60)
     
     # Run Streamlit
     try:
-        subprocess.run([sys.executable, "-m", "streamlit", "run", "app.py"], check=True)
+        subprocess.run([sys.executable, "-m", "streamlit", "run", "app_universal.py"], check=True)
     except KeyboardInterrupt:
         print("\n👋 Shutting down...")
     except subprocess.CalledProcessError as e:
@@ -39,4 +40,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

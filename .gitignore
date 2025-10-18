@@ -30,6 +30,9 @@ chroma/
 # NLTK data (downloaded automatically)
 nltk_data/
 
+# Upload directory (user data)
+data/uploads/
+
 # OS files
 .DS_Store
 Thumbs.db
@@ -39,3 +42,7 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Temporary files
+*.tmp
+*.temp

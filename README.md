@@ -1,10 +1,10 @@
-# Multi-Document RAG Assistant
+# Universal Document RAG Assistant
 
-A powerful Retrieval-Augmented Generation (RAG) application that allows you to upload your own markdown documents and ask questions about them using AI.
+A powerful Retrieval-Augmented Generation (RAG) application that allows you to upload documents in various formats (PDF, Word, PowerPoint, Excel, CSV, JSON, HTML, Markdown, Text) and ask questions about them using AI.
 
 ## ✨ Features
 
-- **📁 File Upload**: Upload multiple markdown files through the web interface
+- **📁 File Upload**: Upload documents in multiple formats (PDF, Word, PowerPoint, Excel, CSV, JSON, HTML, Markdown, Text)
 - **🤖 AI Chat**: Ask questions about your documents and get intelligent answers
 - **📖 Source Attribution**: See exactly which documents and sections were used for each answer
 - **💬 Chat History**: Maintain conversation context during your session
@@ -29,12 +29,6 @@ echo "OPENAI_API_KEY=your_api_key_here" > .env
 
 ### 3. Launch the Application
 
-#### Option A: Enhanced Multi-Document Version (Recommended)
-```bash
-python run_enhanced_ui.py
-```
-
-#### Option B: Original Single Document Version
 ```bash
 python run_ui.py
 ```
@@ -43,14 +37,12 @@ The web interface will open at `http://localhost:8501`
 
 ## 📚 How to Use
 
-### Enhanced Version (Multi-Document Support)
-
-1. **Upload Documents**: Use the sidebar to upload markdown files
+1. **Upload Documents**: Use the sidebar to upload files in various formats
 2. **Ask Questions**: Chat with your documents using natural language
 3. **View Sources**: Expand the "Sources" section to see which documents were used
 4. **Manage Documents**: View document statistics and clear the database if needed
 
-### Original Version (Alice in Wonderland)
+### Example with Alice in Wonderland
 
 1. **Create Database**: Run `python create_database_simple.py` to process Alice in Wonderland
 2. **Launch UI**: Run `python run_ui.py` to start the web interface
@@ -75,13 +67,14 @@ python query_data.py "Your question here"
 ## 📁 Project Structure
 
 ```
-├── app.py                    # Original Streamlit app (Alice in Wonderland)
-├── app_enhanced.py           # Enhanced multi-document app
-├── run_ui.py                 # Original launcher
-├── run_enhanced_ui.py        # Enhanced launcher
+├── app.py                    # Universal Streamlit app (all formats)
+├── run_ui.py                 # Launcher script
+├── start_ui.bat              # Windows batch file
 ├── document_manager.py       # Document management utility
-├── create_database_simple.py # Database creation script
+├── create_database_simple.py # Database creation script (Alice in Wonderland)
+├── query_data.py             # Command line interface
 ├── requirements.txt          # Dependencies
+├── SUPPORTED_FORMATS.md      # Format documentation
 └── README.md                # This file
 ```
 
