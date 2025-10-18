@@ -36,11 +36,29 @@ python create_database.py
 
 ## Query the database
 
-Query the Chroma DB.
+### Command Line Interface
+
+Query the Chroma DB using the command line.
 
 ```python
 python query_data.py "How does Alice meet the Mad Hatter?"
 ```
+
+### Web Interface (NEW!)
+
+Launch the interactive web interface.
+
+```python
+python run_ui.py
+```
+
+This will start a Streamlit web app with a modern chat interface where you can:
+- Ask questions about Alice in Wonderland
+- See source documents for each answer
+- View chat history
+- Use example questions to get started
+
+The web interface will automatically open in your browser at `http://localhost:8501`.
 
 > You'll also need to set up an OpenAI account (and set the OpenAI key in your environment variable) for this to work.
 
