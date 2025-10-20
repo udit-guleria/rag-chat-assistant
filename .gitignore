@@ -46,3 +46,19 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+
+# System directories (Windows)
+AppData/
+ProgramData/
+Windows/
+Users/
+Documents and Settings/
+
+# Browser data
+*.crx
+*.xpi
+
+# System files
+*.sys
+*.dll
+*.exe

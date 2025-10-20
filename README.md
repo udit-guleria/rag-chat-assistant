@@ -110,6 +110,24 @@ python query_data.py "Your question here"
 
 > **Note**: You'll need to set up an OpenAI account and API key for the AI responses to work.
 
+## 📚 Documentation
+
+### Quick Start
+- **README.md** - This file (quick start guide)
+- **PROJECT_DOCUMENTATION.md** - Complete project documentation
+- **DEVELOPER_GUIDE.md** - Developer information and customization
+- **SUPPORTED_FORMATS.md** - Detailed file format documentation
+
+### Setup Scripts
+- **setup.py** - Automated setup script for new users
+- **start_ui.bat** - Windows batch launcher
+- **run_ui.py** - Python launcher script
+
+### Tools
+- **document_manager.py** - CLI document management
+- **query_data.py** - Command-line query interface
+- **create_database_simple.py** - Sample database creation
+
 ## 📺 Tutorial Video
 
 Original tutorial: [RAG+Langchain Python Project: Easy AI/Chat For Your Docs](https://www.youtube.com/watch?v=tcqEUSNCn8I&ab_channel=pixegami)
